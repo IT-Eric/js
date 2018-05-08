@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            background: url(images/1.jpg) no-repeat;
+        }
+        .box {
+            height: 165px;
+            padding-top: 35px;
+            text-align: center;
+            background: rgba(255,255,255,0.3);
+        }
+        img {
+            cursor: pointer;
+            margin: 0 10px;
+        }
+    </style>
+
+    <script>
+        window.onload = function () {
+            var box = document.getElementsByTagName("div")[0];
+            var body = document.body;
+            var imgArr = box.children;
+
+            for (var i=0; i<imgArr.length; i++){
+
+                imgArr[i].index = i;
+                imgArr[i].onmouseover = function () {
+                    body.style.backgroundImage = "url("+this.src+")";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="box">
+    <img src="images/1.jpg" alt="" style="width:200px"/>
+    <img src="images/2.jpg" alt="" style="width:200px"/>
+    <img src="images/3.jpg" alt="" style="width:200px"/>
+    <img src="images/4.jpg" alt="" style="width:200px"/>
+    <img src="images/5.jpg" alt="" style="width:200px"/>
+</div>
+
+</body>
+</html>
